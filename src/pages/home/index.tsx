@@ -44,7 +44,7 @@ const Home = () => {
 
       <div className="container flex justify-center pt-20">
         <div className="grid gap-10 justify-center text-center">
-          <h3 className="text-lg font-semibold p-2 border rounded-lg text-white bg-purple-300">
+          <h3 className="text-xl font-semibold p-4 border rounded-lg text-white bg-purple-300">
             Jiří Krupička & Jiří Krupička
           </h3>
 
@@ -72,8 +72,8 @@ const Home = () => {
             Výsledky TOP 16 flipařů z mentoringu
           </div>
 
-          <div className="border rounded-lg border-purple-300 py-4 text-center flex-col">
-            <table className="block justify-between gap-4 items-center text-center">
+          <div className="border rounded-lg border-purple-300 py-4 text-center grid">
+            <table>
               <thead>
                 <tr>
                   <th>Účastník mentoringu</th>
@@ -219,8 +219,10 @@ const Home = () => {
 
             <div>
               <div className="grid gap-5">
-                <div className="font-bold text-2xl">Garantujeme</div>
-                <div className="text-start grid gap-5">
+                <div className="font-bold text-2xl text-center">
+                  Garantujeme
+                </div>
+                <div className="text-start md:text-center grid gap-5">
                   <div>
                     Dodání investičních nemovitostí k výkupu (podíly, celky) –
                     po celou dobu spolupráce
@@ -238,17 +240,19 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="bg-black text-white grid gap-5 p-8 rounded-lg text-pretty">
-              <div className="text-2xl font font-bold">
-                Jste investor, který se nebojí nasadit holínky?
-                <br />
-                Skvělé!
-              </div>
+            <div className="flex flex-col items-center">
+              <div className="bg-black text-white grid gap-5 p-8 rounded-lg text-pretty md:w-fit">
+                <div className="text-2xl font font-bold">
+                  Jste investor, který se nebojí nasadit holínky?
+                  <br />
+                  Skvělé!
+                </div>
 
-              <div>
-                <button className="uppercase text-black bg-green-500 hover:bg-green-300 rounded-lg text-xl font-medium p-4">
-                  chci mentoring
-                </button>
+                <div>
+                  <button className="uppercase text-black bg-green-500 hover:bg-green-300 rounded-lg text-xl font-medium p-4">
+                    chci mentoring
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -292,10 +296,8 @@ const Home = () => {
 
             <div className="grid  md:grid-cols-2 gap-5 text-left bg-orange-100 rounded-lg p-8">
               <div className="grid gap-5">
-                <div className="text-4xl font-bold text-center">Jirka</div>
-
                 <div className="flex-col gap-2">
-                  <div className="font-semibold text-lg">Jiří Krupička</div>
+                  <div className="font-semibold text-xl">Jiří Krupička</div>
                   <div className="flex gap-2">
                     <div>FB</div>
                     <div>IG</div>
@@ -321,10 +323,8 @@ const Home = () => {
               </div>
 
               <div className="grid gap-5">
-                <div className="text-4xl font-bold text-center">Jirka</div>
-
                 <div className="flex-col gap-2">
-                  <div className="font-semibold text-lg">Jiří Krupička</div>
+                  <div className="font-semibold text-xl">Jiří Krupička</div>
                   <div className="flex gap-2">
                     <div>FB</div>
                     <div>IG</div>
@@ -351,11 +351,109 @@ const Home = () => {
             </div>
 
             <div>
-              <div className='text-4xl font-bold'>
+              <div className="text-4xl font-bold">
                 Máte zájem, ale předtím se ještě chcete na něco zeptat?
               </div>
             </div>
+
+            <div className="border lg:flex lg:flex-col rounded-lg border-green-300 lg:justify-center">
+              <div className="grid gap-5 p-5">
+                <input
+                  className="outline-none border-green-300 border p-2 rounded-lg"
+                  type="text"
+                  placeholder="Jméno a příjmení"
+                />
+
+                <input
+                  className="outline-none border-green-300 border p-2 rounded-lg"
+                  type="tel"
+                  name=""
+                  id=""
+                  placeholder="Telefonní číslo"
+                />
+
+                <input
+                  className="outline-none border-green-300 border p-2 rounded-lg"
+                  type="email"
+                  name=""
+                  id=""
+                  placeholder="Email"
+                />
+
+                <textarea
+                  className="outline-none border-green-300 border p-2 rounded-lg"
+                  name=""
+                  id=""
+                  placeholder="Napište nám zprávu."
+                />
+
+                <div><button className="uppercase font-bold bg-green-300 hover:bg-green-500 rounded-lg text-xl py-4 px-8">
+                  odeslat
+                </button>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-center text-2xl md:text-4xl font-semibold">
+              <div>
+                Těšíme se na spolupráci!
+                <br />
+                <br />
+                Jiří & Jiří
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <div className="grid gap-2 text-left pb-5 pt-10">
+        <div className="text-xl md:text-2xl font-semibold pb-2">
+          Flipování nemovitostí s.r.o.
+        </div>
+
+        <div className="grid gap-2 md:grid-cols-2">
+          <div className="grid gap-2">
+            <a href="tel:+420111222333">
+              <b>Telefon</b>:{' '}
+              <span className="hover:underline-offset-4 hover:underline">
+                +420 111 222 333
+              </span>
+            </a>
+
+            <a
+              className="hover:underline-offset-4 hover:underline"
+              href="mailto:investicnicentrum@gmail.com"
+            >
+              <b>Email</b>:{' '}
+              <span className="hover:underline-offset-4 hover:underline">
+                investicnicentrum@gmail.com
+              </span>
+            </a>
+          </div>
+
+          <div className='grid gap-2 text-pretty'>
+            <div>
+              <b>Adresa</b>: Rybná 716/24, 110 00 Praha 1
+            </div>
+
+            <div className="flex gap-5 md:gap-10">
+              <div>
+                <b>IČ</b>: 19773625
+              </div>
+
+              <div>
+                <b>DIČ</b>: CZ19773625
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="hover:underline-offset-4 hover:underline font-semibold text-center pt-5">
+          Informační memorandum
+        </div>
+
+        <div className="text-xs text-center">
+          Copyright © 2024 IVC — všechna práva vyhrazena.
         </div>
       </div>
     </main>
