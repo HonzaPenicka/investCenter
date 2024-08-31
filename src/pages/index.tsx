@@ -42,7 +42,7 @@ const Home = () => {
         )}
       </nav>
 
-      <nav className="justify-between hidden lg:flex font-semibold text-xl items-center items-center bg-red w-full py-4 right-0 max-w-full box-border px-4">
+      <nav className="justify-between hidden lg:flex font-semibold text-xl items-center bg-red w-full py-8 right-0 max-w-full box-border px-4">
         <div className="flex text-2xl justify-start text-green-300 line-through line-clamp-4">
           Flipování nemovitostí
         </div>
@@ -62,10 +62,10 @@ const Home = () => {
         </div>
       </nav>
 
-      <div className="container flex justify-center pt-20">
+      <div className="container flex justify-center pt-20 lg:pt-0">
         <div className="grid gap-10 justify-center text-center">
           <div className="grid md:flex md:justify-center">
-            <h3 className="text-xl font-semibold p-4 md:px-20 border rounded-lg text-white bg-purple-300">
+            <h3 className="text-xl font-semibold p-4 md:px-20 lg:px-40 border rounded-lg text-white bg-purple-300">
               Jiří Krupička & Jiří Krupička
             </h3>
           </div>
@@ -418,15 +418,6 @@ const Home = () => {
                     odeslat
                   </button>
                 </div>
-              </div>
-            </div>
-
-            <div className="flex justify-center text-2xl md:text-4xl font-semibold">
-              <div>
-                Těšíme se na spolupráci!
-                <br />
-                <br />
-                Jiří & Jiří
               </div>
             </div>
           </div>
