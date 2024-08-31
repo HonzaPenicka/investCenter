@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <main className="container flex-col px-4 mx-auto">
-      <nav className="flex justify-end fixed items-center bg-white w-full py-4 right-0 max-w-full box-border px-4">
+      <nav className="flex justify-end fixed lg:hidden items-center bg-white w-full py-4 right-0 max-w-full box-border px-4">
         <div>
           <Burger onClick={toggle} />
         </div>
@@ -42,11 +42,33 @@ const Home = () => {
         )}
       </nav>
 
+      <nav className="justify-between hidden lg:flex font-semibold text-xl items-center items-center bg-red w-full py-4 right-0 max-w-full box-border px-4">
+        <div className="flex text-2xl justify-start text-green-300 line-through line-clamp-4">
+          Flipování nemovitostí
+        </div>
+
+        <div className="flex justify-end gap-5 lg:gap-10">
+          <span className="hover:underline underline-offset-4">
+            Chci domluvit službu
+          </span>
+
+          <span className="hover:underline underline-offset-4">
+            Chci si domluvit schůzku
+          </span>
+
+          <span className="hover:underline underline-offset-4">
+            Mentoring nemovitostí
+          </span>
+        </div>
+      </nav>
+
       <div className="container flex justify-center pt-20">
         <div className="grid gap-10 justify-center text-center">
-          <h3 className="text-xl font-semibold p-4 border rounded-lg text-white bg-purple-300">
-            Jiří Krupička & Jiří Krupička
-          </h3>
+          <div className="grid md:flex md:justify-center">
+            <h3 className="text-xl font-semibold p-4 md:px-20 border rounded-lg text-white bg-purple-300">
+              Jiří Krupička & Jiří Krupička
+            </h3>
+          </div>
 
           <h1 className="text-6xl font-bold text-pretty">
             Mentoring flipování nemovitostí
@@ -72,7 +94,7 @@ const Home = () => {
             Výsledky TOP 16 flipařů z mentoringu
           </div>
 
-          <div className="border rounded-lg border-purple-300 py-4 text-center grid">
+          <div className="border rounded-lg border-purple-300 py-4 text-center grid md:mx-10 lg:mx-20">
             <table>
               <thead>
                 <tr>
@@ -173,7 +195,7 @@ const Home = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-              <div className="bg-green-300 rounded-lg grid gap-4 p-8 text-left">
+              <div className="bg-green-300 rounded-lg flex flex-col gap-4 p-8 text-left">
                 <div className="text-2xl font-bold">Co nabízíme</div>
 
                 <div>Roční mentoring na téma flipování nemovitostí.</div>
@@ -189,7 +211,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="bg-green-300 rounded-lg grid gap-4 p-8 text-left">
+              <div className="bg-green-300 rounded-lg flex flex-col gap-4 p-8 text-left">
                 <div className="text-2xl font-bold">Pro koho</div>
 
                 <div>
@@ -202,7 +224,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="bg-green-300 rounded-lg grid gap-4 p-8 text-left">
+              <div className="bg-green-300 rounded-lg flex flex-col gap-4 p-8 text-left">
                 <div className="text-2xl font-bold">Cena a podmínky</div>
 
                 <div>
@@ -294,7 +316,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="grid  md:grid-cols-2 gap-5 text-left bg-orange-100 rounded-lg p-8">
+            <div className="grid md:grid-cols-2 gap-10 md:gap-14 lg:gap-20 text-left bg-orange-100 rounded-lg p-8">
               <div className="grid gap-5">
                 <div className="flex-col gap-2">
                   <div className="font-semibold text-xl">Jiří Krupička</div>
@@ -305,20 +327,22 @@ const Home = () => {
                   </div>
                 </div>
 
-                <div>
-                  Jiří je realitní investor a tvůrce podcastu Jiří Krupička
-                  Show. Má za sebou přes 12 let zkušeností v realitách na
-                  různých pozicích. Je uznávaný profesionál v oblasti real
-                  estate, COLD callingu a motivace.
-                </div>
+                <div className="text-balance flex flex-col gap-5">
+                  <div>
+                    Jiří je realitní investor a tvůrce podcastu Jiří Krupička
+                    Show. Má za sebou přes 12 let zkušeností v realitách na
+                    různých pozicích. Je uznávaný profesionál v oblasti real
+                    estate, COLD callingu a motivace.
+                  </div>
 
-                <div>
-                  Jiří založil společnost Krupička Invest, ve které se
-                  specializuje na nákup a prodej na nemovitostí v Česku.
-                </div>
+                  <div>
+                    Jiří založil společnost Krupička Invest, ve které se
+                    specializuje na nákup a prodej na nemovitostí v Česku.
+                  </div>
 
-                <div>
-                  Hodnota firem a nemovitostí Jiříe je přes 200 milionů korun.
+                  <div>
+                    Hodnota firem a nemovitostí Jiříe je přes 200 milionů korun.
+                  </div>
                 </div>
               </div>
 
@@ -332,20 +356,22 @@ const Home = () => {
                   </div>
                 </div>
 
-                <div>
-                  Jiří je realitní investor a tvůrce podcastu Jiří Krupička
-                  Show. Má za sebou přes 12 let zkušeností v realitách na
-                  různých pozicích. Je uznávaný profesionál v oblasti real
-                  estate, COLD callingu a motivace.
-                </div>
+                <div className="text-balance flex flex-col gap-5">
+                  <div>
+                    Jiří je realitní investor a tvůrce podcastu Jiří Krupička
+                    Show. Má za sebou přes 12 let zkušeností v realitách na
+                    různých pozicích. Je uznávaný profesionál v oblasti real
+                    estate, COLD callingu a motivace.
+                  </div>
 
-                <div>
-                  Jiří založil společnost Krupička Invest, ve které se
-                  specializuje na nákup a prodej na nemovitostí v Česku.
-                </div>
+                  <div>
+                    Jiří založil společnost Krupička Invest, ve které se
+                    specializuje na nákup a prodej na nemovitostí v Česku.
+                  </div>
 
-                <div>
-                  Hodnota firem a nemovitostí Jiříe je přes 200 milionů korun.
+                  <div>
+                    Hodnota firem a nemovitostí Jiříe je přes 200 milionů korun.
+                  </div>
                 </div>
               </div>
             </div>
@@ -356,8 +382,8 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="border lg:flex lg:flex-col rounded-lg border-green-300 lg:justify-center">
-              <div className="grid gap-5 p-5">
+            <div className="border grid lg:flex lg:flex-col rounded-lg border-green-300 md:mx-20 lg:mx-80">
+              <div className="flex flex-col gap-5 p-5">
                 <input
                   className="outline-none border-green-300 border p-2 rounded-lg"
                   type="text"
@@ -387,9 +413,10 @@ const Home = () => {
                   placeholder="Napište nám zprávu."
                 />
 
-                <div><button className="uppercase font-bold bg-green-300 hover:bg-green-500 rounded-lg text-xl py-4 px-8">
-                  odeslat
-                </button>
+                <div>
+                  <button className="uppercase font-bold bg-green-300 hover:bg-green-500 rounded-lg text-xl py-4 px-8">
+                    odeslat
+                  </button>
                 </div>
               </div>
             </div>
@@ -411,7 +438,7 @@ const Home = () => {
           Flipování nemovitostí s.r.o.
         </div>
 
-        <div className="grid gap-2 md:grid-cols-2">
+        <div className="grid gap-2 md:grid-cols-2 lg:justify-around">
           <div className="grid gap-2">
             <a href="tel:+420111222333">
               <b>Telefon</b>:{' '}
@@ -431,7 +458,7 @@ const Home = () => {
             </a>
           </div>
 
-          <div className='grid gap-2 text-pretty'>
+          <div className="grid gap-2 text-pretty md:justify-end">
             <div>
               <b>Adresa</b>: Rybná 716/24, 110 00 Praha 1
             </div>
