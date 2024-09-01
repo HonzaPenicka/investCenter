@@ -1,12 +1,18 @@
 import { useCallback, useState } from 'react';
 
+import { ModalFormDialog } from '@/components/modal';
 import { Burger } from '@/icons/burger';
 
 const Home = () => {
   const [open, setOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggle = useCallback(() => {
     setOpen((state) => !state);
+  }, []);
+
+  const toggleModal = useCallback(() => {
+    setIsModalOpen((state) => !state);
   }, []);
 
   return (
@@ -19,25 +25,35 @@ const Home = () => {
         {open && (
           <div className="fixed mt-60 mx-auto z-10 gap-10 text-lg border-black font-semibold px-4 box-border py-6 rounded-lg bg-purple-300">
             <div className="flex justify-between gap-4 hover:bg-green-300 rounded-lg py-2 px-4">
-              <span className="hover:underline underline-offset-4">
+              <button
+                className="hover:underline underline-offset-4"
+                onClick={toggleModal}
+              >
                 Chci domluvit službu
-              </span>
+              </button>
               <span className="font-bold r-0">&rarr;</span>
             </div>
 
             <div className="flex justify-between gap-4 hover:bg-green-300 rounded-lg py-2 px-4">
-              <span className="hover:underline underline-offset-4">
+              <button
+                className="hover:underline underline-offset-4"
+                onClick={toggleModal}
+              >
                 Chci si domluvit schůzku
-              </span>
+              </button>
               <span className="font-bold">&rarr;</span>
             </div>
 
             <div className="flex justify-between gap-4 hover:bg-green-300 rounded-lg py-2 px-4 rounded-b-lg">
-              <span className="hover:underline underline-offset-4">
+              <button
+                className="hover:underline underline-offset-4"
+                onClick={toggleModal}
+              >
                 Mentoring nemovitostí
-              </span>
+              </button>
               <span className="font-bold">&rarr;</span>
             </div>
+            {isModalOpen && <ModalFormDialog />}
           </div>
         )}
       </nav>
@@ -48,9 +64,13 @@ const Home = () => {
         </div>
 
         <div className="flex justify-end gap-5 lg:gap-10">
-          <span className="hover:underline underline-offset-4">
+          <button
+            className="hover:underline underline-offset-4"
+            onClick={toggleModal}
+          >
             Chci domluvit službu
-          </span>
+          </button>
+          {isModalOpen && <ModalFormDialog />}
 
           <span className="hover:underline underline-offset-4">
             Chci si domluvit schůzku
