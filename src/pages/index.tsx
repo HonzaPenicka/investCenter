@@ -70,16 +70,22 @@ const Home = () => {
           >
             Chci domluvit službu
           </button>
-          {isModalOpen && <ModalFormDialog />}
 
-          <span className="hover:underline underline-offset-4">
+          <button
+            className="hover:underline underline-offset-4"
+            onClick={toggleModal}
+          >
             Chci si domluvit schůzku
-          </span>
+          </button>
 
-          <span className="hover:underline underline-offset-4">
+          <button
+            className="hover:underline underline-offset-4"
+            onClick={toggleModal}
+          >
             Mentoring nemovitostí
-          </span>
+          </button>
         </div>
+        {isModalOpen && <ModalFormDialog />}
       </nav>
 
       <div className="container flex justify-center pt-20 lg:pt-0">
@@ -402,7 +408,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="border grid lg:flex lg:flex-col rounded-lg border-green-300 md:mx-20 lg:mx-80">
+            <div className="border grid lg:flex lg:flex-col rounded-lg border-green-300 md:mx-20 lg:mx-96">
               <div className="flex flex-col gap-5 p-5">
                 <input
                   className="outline-none border-green-300 border p-2 rounded-lg"

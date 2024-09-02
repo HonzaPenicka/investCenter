@@ -12,18 +12,18 @@ export const ModalFormDialog: FunctionComponent = () => {
     <>
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-black/50">
-          <div className="bg-white rounded-lg shadow-lg px-4 py-8 w-full z-60 max-w-lg mx-4 grid">
+          <div className="relative bg-white rounded-lg shadow-lg px-4 py-8 w-full z-60 max-w-lg mx-4 grid">
+            {' '}
+            {/* Zde přidána třída 'relative' */}
             <button
-              className="absolute right-8 top-8 text-3xl"
+              className="absolute right-4 top-4 text-3xl" // Zde upraveno odsazení na 'right-4 top-4' pro lepší vzhled na různých zařízeních
               onClick={toggle}
             >
               &#0215;
             </button>
-
             <div className="flex text-2xl justify-center text-green-300 line-through line-clamp-4">
               Flipování nemovitostí
             </div>
-
             <div className="flex flex-col gap-5 p-5">
               <input
                 className="outline-none border-green-300 border p-2 rounded-lg"
