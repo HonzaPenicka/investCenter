@@ -35,7 +35,7 @@ const Home = () => {
           <div className="fixed mt-60 mx-auto z-10 gap-10 text-lg border-black font-semibold px-4 box-border py-6 rounded-lg bg-purple-300">
             <div className="flex justify-between gap-4 hover:bg-green-300 rounded-lg py-2 px-4">
               <button
-                className="hover:underline underline-offset-4"
+                className="hover:underline underline-offset-4 decoration-green-300"
                 onClick={toggleModal}
               >
                 Chci domluvit službu
@@ -45,7 +45,7 @@ const Home = () => {
 
             <div className="flex justify-between gap-4 hover:bg-green-300 rounded-lg py-2 px-4">
               <button
-                className="hover:underline underline-offset-4"
+                className="hover:underline underline-offset-4 decoration-green-300"
                 onClick={toggleModal}
               >
                 Chci si domluvit schůzku
@@ -55,7 +55,7 @@ const Home = () => {
 
             <div className="flex justify-between gap-4 hover:bg-green-300 rounded-lg py-2 px-4 rounded-b-lg">
               <button
-                className="hover:underline underline-offset-4"
+                className="hover:underline underline-offset-4 decoration-green-300"
                 onClick={toggleModal}
               >
                 Mentoring nemovitostí
@@ -75,21 +75,21 @@ const Home = () => {
 
         <div className="flex justify-end gap-5 lg:gap-10">
           <button
-            className="hover:underline underline-offset-4"
+            className="hover:underline underline-offset-4 decoration-green-300"
             onClick={toggleModal}
           >
             Chci domluvit službu
           </button>
 
           <button
-            className="hover:underline underline-offset-4"
+            className="hover:underline underline-offset-4 decoration-green-300"
             onClick={toggleModal}
           >
             Chci si domluvit schůzku
           </button>
 
           <button
-            className="hover:underline underline-offset-4"
+            className="hover:underline underline-offset-4 decoration-green-300"
             onClick={toggleModal}
           >
             Mentoring nemovitostí
@@ -117,7 +117,7 @@ const Home = () => {
           </h2>
 
           <div>
-            <button className="uppercase font-bold bg-green-300 hover:bg-green-500 rounded-lg text-xl py-4 px-8">
+            <button className="uppercase font-bold bg-green-300 hover:bg-purple-300 rounded-lg text-xl py-4 px-8">
               Chci se naučit investovat
             </button>
           </div>
@@ -287,7 +287,7 @@ const Home = () => {
             </div>
 
             <div>
-              <div className="grid gap-5">
+              <div className="grid gap-5 text-left">
                 <div className="font-bold text-2xl text-center">
                   Proč si vybrat náš mentoring?
                 </div>
@@ -298,7 +298,7 @@ const Home = () => {
                     nezávislosti a dlouhodobého růstu.
                   </div>
 
-                  <div className="font-bold text-2xl text-center">
+                  <div className="font-bold text-2xl">
                     Jak vám pomůžeme uspět?
                   </div>
                   <div>
@@ -321,9 +321,7 @@ const Home = () => {
                     naraisovat kapitál pro vaše projekty.
                   </div>
 
-                  <div className="font-bold text-2xl text-center">
-                    Co od nás získáte?
-                  </div>
+                  <div className="font-bold text-2xl">Co od nás získáte?</div>
                   <div>
                     Detailní strategii a individuální plán, jak dosáhnout vašich
                     investičních cílů.
@@ -342,7 +340,7 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col items-center">
-              <div className="bg-black text-white grid gap-5 p-8 rounded-lg text-pretty md:w-fit">
+              <div className="grid gap-5 p-8 rounded-lg text-pretty md:w-fit">
                 <div className="text-2xl font font-bold">
                   Jste připraveni investovat do nemovitostí a dosáhnout nových
                   výšin?
@@ -352,77 +350,79 @@ const Home = () => {
                 </div>
 
                 <div>
-                  <button className="uppercase text-black bg-green-500 hover:bg-green-300 rounded-lg text-xl font-medium p-4">
+                  <button className="uppercase text-black bg-green-300 font-bold hover:bg-purple-300 rounded-lg text-xl p-4">
                     chci mentoring
                   </button>
                 </div>
               </div>
             </div>
 
-            <div className="grid gap-5 lg:justify-center">
+            <div className="grid gap-10 lg:justify-center">
               <div className="text-4xl font font-bold">
                 Témata workshopu a mentoringu
               </div>
 
-              <div className="border-purple-300 border-4 rounded-lg grid md:grid-cols-3 lg:max-w-screen-2xl text-left p-8 font-semibold text-xl gap-10">
-                <div className="grid gap-10">
-                  <div className="text-3xl font-bold underline underline-offset-4 decoration-purple-400">
+              <div className="border-purple-300 border-4 rounded-lg grid lg:max-w-screen-2xl text-left p-8 font-semibold text-xl gap-10">
+                {/* První sloupec */}
+                <div className="flex flex-col gap-10 h-full">
+                  <div className="text-3xl font-bold underline underline-offset-4 decoration-purple-400 text-center">
                     Proč investovat do flipování nemovitostí?
                   </div>
-                  <div>
+                  <div className="flex-1">
                     Objevte důvody, proč je flipování nemovitostí jednou z
                     nejziskovějších a nejdynamičtějších forem investování na
                     trhu.
                   </div>
-                  <div>
+                  <div className="flex-1">
                     Získejte hlubší porozumění trhu s nemovitostmi a naučte se,
                     jak efektivně využít své zdroje pro dosažení finanční
                     nezávislosti.
                   </div>
-                  <div>
+                  <div className="flex-1">
                     Proč je důležité mít správné nástroje a know-how k tomu,
                     abyste se stali úspěšným investorem?
                   </div>
                 </div>
 
-                <div className="grid gap-10">
-                  <div className="text-3xl font-bold underline underline-offset-4 decoration-purple-400">
+                {/* Druhý sloupec */}
+                <div className="flex flex-col gap-10 h-full">
+                  <div className="text-3xl font-bold underline underline-offset-4 decoration-purple-400 text-center">
                     Jak dosáhnout úspěchu ve flipování nemovitostí?
                   </div>
-
-                  <div>
+                  <div className="flex-1">
                     Naučte se, jak analyzovat trh, vyhledávat a nakupovat
                     nemovitosti za správnou cenu a jak efektivně jednat při
                     koupi i prodeji.
                   </div>
-                  <div>
+                  <div className="flex-1">
                     Osvojte si strategie, které zajišťují maximální návratnost
                     investic, a to i na konkurenčních trzích.
                   </div>
-                  <div>
+                  <div className="flex-1">
                     Jak dodržovat etické standardy a legislativní požadavky při
                     flipování nemovitostí, abyste se vyhnuli rizikům a právním
                     problémům?
                   </div>
                 </div>
 
-                <div className="grid gap-10">
-                  <div className="text-3xl font-bold underline underline-offset-4 decoration-purple-400">
+                {/* Třetí sloupec */}
+                <div className="flex flex-col gap-10 h-full">
+                  <div className="text-3xl font-bold underline underline-offset-4 decoration-purple-400 text-center">
                     Co vás čeká na workshopu?
                   </div>
-                  <div>
+                  <div className="flex-1">
                     Detailní školení o flipovacích strategiích od A do Z - od
                     výběru nemovitosti po finální prodej.
                   </div>
-                  <div>
+                  <div className="flex-1">
                     Praktické návody na ekonomiku flipování, včetně
                     rozpočtování, odhadů a správy nákladů.
                   </div>
-                  <div>
+                  <div className="flex-1">
                     Kompletní přehled o právních požadavcích a předpisech, které
                     je třeba dodržovat.
                   </div>
-                  <div>
+                  <div className="flex-1">
                     Etický kodex flipování nemovitostí - zásady a praktiky,
                     které vás odliší na trhu.
                   </div>
@@ -430,7 +430,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="text-left bg-orange-100 rounded-lg p-8 lg:max-w-screen-sm justify-self-center">
+            <div className="text-left border-purple-500 border rounded-lg p-8 lg:max-w-screen-md justify-self-center">
               <div className="grid gap-5">
                 <div className="flex-col gap-2">
                   <div className="font-semibold text-xl">Jiří Krupička</div>
@@ -470,7 +470,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="border grid lg:flex lg:flex-col rounded-lg border-green-300 md:mx-auto my-4 md:my-8 md:w-96 xl:w-[32rem]">
+            <div className="border grid lg:flex lg:flex-col rounded-lg border-purple-500 md:mx-auto my-4 md:my-8 md:w-96 xl:w-[32rem]">
               <div className="flex flex-col gap-5 p-5">
                 <input
                   className="outline-none border-green-300 border p-2 rounded-lg"
@@ -502,7 +502,7 @@ const Home = () => {
                 />
 
                 <div>
-                  <button className="uppercase font-bold bg-green-300 hover:bg-green-500 rounded-lg text-xl py-4 px-8">
+                  <button className="uppercase font-bold bg-green-300 hover:bg-purple-300 rounded-lg text-xl py-4 px-8">
                     odeslat
                   </button>
                 </div>
