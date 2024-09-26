@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { ModalFormDialog } from '@/components/modal';
 import { Burger } from '@/icons/burger';
@@ -6,7 +6,6 @@ import { Burger } from '@/icons/burger';
 const Home = () => {
   const [open, setOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const toggle = useCallback(() => {
     setOpen((state) => !state);
@@ -16,9 +15,6 @@ const Home = () => {
     setIsModalOpen((state) => !state);
   }, []);
 
-  const togglePopup = () => {
-    setIsPopupOpen((prevState) => !prevState); // Přepíná stav popupu
-  };
 
   const data = {
     title: 'Investorské centrum Jiřího Krupičky',
@@ -31,7 +27,7 @@ const Home = () => {
         <div className="flex-col text-2xl justify-start text-green-300 gap-1">
           <span className="line-through line-clamp-4">Investorské centrum</span>
           <span className="list-none line-clamp-none">Jiřího Krupičky</span>
-        </div>{' '}
+        </div>
         <div>
           <Burger onClick={toggle} className="cursor-pointer" />
         </div>
@@ -57,6 +53,8 @@ const Home = () => {
                 Mentoring nemovitostí
               </button>
             </div>
+            {isModalOpen && <ModalFormDialog />}
+
           </div>
         )}
       </nav>
@@ -90,7 +88,7 @@ const Home = () => {
             Mentoring nemovitostí
           </button>
         </div>
-
+        
         {isModalOpen && <ModalFormDialog />}
       </nav>
 
@@ -130,7 +128,7 @@ const Home = () => {
             Výsledky TOP flipařů z mentoringu
           </div>
 
-          <div className="border rounded-lg border-purple-300 py-4 text-center mx-4 lg:mx-20">
+          <div className="border rounded-lg border-purple-300 py-4 text-center lg:mx-20">
             <table className="w-full table-auto border-collapse">
               <thead>
                 <tr>
