@@ -1,6 +1,6 @@
 import { FunctionComponent, useCallback, useState } from 'react';
 
-export const Dropdown: FunctionComponent<Props> = () => {
+export const Dropdown: FunctionComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(
     'Zkušenost s flipováním'
