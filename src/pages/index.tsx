@@ -26,113 +26,112 @@ const Home = () => {
 
   return (
     <main className="container flex-col px-4 mx-auto">
-      <nav className="flex justify-end fixed lg:hidden items-center bg-white w-full py-4 right-0 max-w-full box-border px-4">
+      {/* Mobile Menu */}
+      <nav className="lg:hidden fixed top-0 left-0 w-full bg-white shadow-md z-20 flex justify-between items-center px-6 py-2">
+        <div className="flex-col text-2xl justify-start text-green-300 gap-1">
+          <span className="line-through line-clamp-4">Investorské centrum</span>
+          <span className="list-none line-clamp-none">Jiřího Krupičky</span>
+        </div>{' '}
         <div>
-          <Burger onClick={toggle} />
+          <Burger onClick={toggle} className="cursor-pointer" />
         </div>
-
         {open && (
-          <div className="fixed mt-60 mx-auto z-10 gap-10 text-lg border-black font-semibold px-4 box-border py-6 rounded-lg bg-purple-300">
-            <div className="flex justify-between gap-4 hover:bg-green-300 rounded-lg py-2 px-4">
+          <div className="absolute top-20 left-0 w-full bg-white shadow-lg z-30">
+            <div className="flex flex-col items-center gap-6 py-6 px-8 text-lg font-medium text-gray-700">
               <button
-                className="hover:underline underline-offset-4 decoration-green-300"
+                className="hover:text-green-500 transition duration-200"
                 onClick={toggleModal}
               >
                 Chci domluvit službu
               </button>
-              <span className="font-bold r-0">&rarr;</span>
-            </div>
-
-            <div className="flex justify-between gap-4 hover:bg-green-300 rounded-lg py-2 px-4">
               <button
-                className="hover:underline underline-offset-4 decoration-green-300"
+                className="hover:text-green-500 transition duration-200"
                 onClick={toggleModal}
               >
                 Chci si domluvit schůzku
               </button>
-              <span className="font-bold">&rarr;</span>
-            </div>
-
-            <div className="flex justify-between gap-4 hover:bg-green-300 rounded-lg py-2 px-4 rounded-b-lg">
               <button
-                className="hover:underline underline-offset-4 decoration-green-300"
+                className="hover:text-green-500 transition duration-200"
                 onClick={toggleModal}
               >
                 Mentoring nemovitostí
               </button>
-              <span className="font-bold">&rarr;</span>
             </div>
-            {isModalOpen && <ModalFormDialog />}
           </div>
         )}
       </nav>
 
-      <nav className="justify-between hidden lg:flex font-semibold text-xl items-center bg-red w-full py-8 right-0 max-w-full box-border px-4">
+      {/* Desktop Menu */}
+      <nav className="hidden lg:flex justify-between items-center bg-white w-full py-2 px-10 shadow-md fixed top-0 left-0 z-20">
         <div className="flex-col text-2xl justify-start text-green-300 gap-1">
           <span className="line-through line-clamp-4">Investorské centrum</span>
           <span className="list-none line-clamp-none">Jiřího Krupičky</span>
         </div>
 
-        <div className="flex justify-end gap-5 lg:gap-10">
+        <div className="flex gap-8 text-lg font-medium">
           <button
-            className="hover:underline underline-offset-4 decoration-green-300"
+            className="hover:text-green-500 transition duration-200"
             onClick={toggleModal}
           >
             Chci domluvit službu
           </button>
 
           <button
-            className="hover:underline underline-offset-4 decoration-green-300"
+            className="hover:text-green-500 transition duration-200"
             onClick={toggleModal}
           >
             Chci si domluvit schůzku
           </button>
 
           <button
-            className="hover:underline underline-offset-4 decoration-green-300"
+            className="hover:text-green-500 transition duration-200"
             onClick={toggleModal}
           >
             Mentoring nemovitostí
           </button>
         </div>
+
         {isModalOpen && <ModalFormDialog />}
       </nav>
 
-      <div className="container flex justify-center pt-20 lg:pt-0">
+      <div className="container flex justify-center pt-32">
         <div className="grid gap-10 justify-center text-center">
-          <div className="flex justify-center">
-            <h3 className="text-2xl font-semibold p-4 px-20 lg:px-40 border rounded-lg text-white bg-purple-300">
+          <div className="flex flex-col items-center justify-center text-center bg-white text-gray-800 relative">
+            {/* Floating Box for Name */}
+            <div className="bg-purple-600 text-white font-bold text-3xl rounded-full px-12 py-4 shadow-lg mb-10">
               Jiří Krupička
-            </h3>
-          </div>
+            </div>
 
-          <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-pretty">
-            Učíme vás, jak dosáhnout finanční svobody prostřednictvím
-            nemovitostí
-          </h1>
+            {/* Main Heading */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight max-w-4xl mb-8">
+              Učíme vás, jak dosáhnout finanční svobody prostřednictvím
+              nemovitostí
+            </h1>
 
-          <h2 className="text-xl text-pretty">
-            Naučte se, jak efektivně investovat a dosáhnout vysokých výnosů s
-            našimi experty.
-          </h2>
+            {/* Subheading */}
+            <p className="text-xl md:text-2xl lg:text-3xl font-light max-w-3xl mb-10">
+              Naučte se, jak efektivně investovat a dosáhnout vysokých výnosů s
+              našimi experty.
+            </p>
 
-          <div>
-            <button className="uppercase font-bold bg-green-300 hover:bg-purple-300 rounded-lg text-xl py-4 px-8">
+            {/* Call to Action Button */}
+            <button className="bg-green-500 hover:bg-green-600 text-white uppercase font-bold py-4 px-12 rounded-full text-lg transition-transform transform hover:scale-105 shadow-xl">
               Chci se naučit investovat
             </button>
-          </div>
 
-          <div className="text-2xl md:text-3xl lg:text-5xl font-bold text-pretty">
-            Vytvoříme s vámi progresivní portfolio pro
-            <br className="hidden md:block" /> váš pohodlný život do 3 let
+            {/* Supporting Message */}
+            <div className="text-3xl md:text-4xl lg:text-5xl font-semibold mt-12 max-w-3xl">
+              Vytvoříme s vámi progresivní portfolio pro{' '}
+              <br className="hidden md:block" /> váš pohodlný život do 3 let
+            </div>
           </div>
 
           <div className="text-2xl font-bold text-pretty">
             Výsledky TOP flipařů z mentoringu
           </div>
 
-          <div className="border rounded-lg border-purple-300 py-4 text-center grid md:mx-10 lg:mx-20">
-            <table>
+          <div className="border rounded-lg border-purple-300 py-4 text-center mx-4 lg:mx-20">
+            <table className="w-full table-auto border-collapse">
               <thead>
                 <tr>
                   <th>Účastník mentoringu</th>
@@ -227,221 +226,246 @@ const Home = () => {
           </div>
 
           <div className="grid gap-10">
-            <div className="text-4xl font-bold text-pretty">
-              O mentoringu s Jiřím Krupičkou
-            </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-              <div className="bg-green-300 rounded-lg flex flex-col gap-4 p-8 text-left">
-                <div className="text-2xl font-bold">Co nabízíme</div>
-
-                <div>
+              <div className="bg-white rounded-lg shadow-lg flex flex-col gap-6 p-8 text-left">
+                <div className="text-3xl font-bold text-green-600">
+                  Co nabízíme
+                </div>
+                <p className="text-lg text-gray-700">
                   Intenzivní roční mentoring zaměřený na investice do
                   nemovitostí a jejich efektivní správu.
-                </div>
-
-                <div>
+                </p>
+                <p className="text-lg text-gray-700">
                   Skupinové mastermind setkání 4x ročně v Praze s našimi
                   investičními odborníky.
-                </div>
-
-                <div>
+                </p>
+                <p className="text-lg text-gray-700">
                   Kompletní vzdělání od základů až po pokročilé strategie,
                   včetně dodání konkrétních investičních příležitostí a
                   vyjednávání lepších podmínek.
-                </div>
+                </p>
               </div>
 
-              <div className="bg-green-300 rounded-lg flex flex-col gap-4 p-8 text-left">
-                <div className="text-2xl font-bold">Pro koho</div>
-
-                <div>
+              <div className="bg-white rounded-lg shadow-lg flex flex-col gap-6 p-8 text-left">
+                <div className="text-3xl font-bold text-green-600">
+                  Pro koho
+                </div>
+                <p className="text-lg text-gray-700">
                   Pro ambiciózní investory, kteří chtějí dosáhnout finanční
                   nezávislosti v horizontu 2-3 let.
-                </div>
-
-                <div>
+                </p>
+                <p className="text-lg text-gray-700">
                   Náš unikátní přístup vám pomůže zkrátit cestu k vašim
                   investičním cílům a dosáhnout nadprůměrných výsledků.
-                </div>
+                </p>
               </div>
 
-              <div className="bg-green-300 rounded-lg flex flex-col gap-4 p-8 text-left">
-                <div className="text-2xl font-bold">Cena a podmínky</div>
-
-                <div>
+              <div className="bg-white rounded-lg shadow-lg flex flex-col gap-6 p-8 text-left">
+                <div className="text-3xl font-bold text-green-600">
+                  Cena a podmínky
+                </div>
+                <p className="text-lg text-gray-700">
                   Minimální vstupní kapitál je 1.000.000 Kč (bez možnosti
                   financování hypotékou).
-                </div>
-
-                <div>
+                </p>
+                <p className="text-lg text-gray-700">
                   Provize 10% z čistého zisku po odečtení všech nákladů
                   spojených s transakcí.
-                </div>
-
-                <div>
+                </p>
+                <p className="text-lg text-gray-700">
                   Roční poplatek za účast v programu a přístup ke všem
                   materiálům.
-                </div>
+                </p>
               </div>
             </div>
 
-            <div>
-              <div className="grid gap-5 text-left">
-                <div className="font-bold text-2xl text-center">
-                  Proč si vybrat náš mentoring?
-                </div>
-                <div className="text-start md:text-center grid gap-5">
+            <div className="bg-purple-50 py-8 rounded-lg shadow-lg">
+              <div className="container mx-auto px-6">
+                <div className="grid gap-12 text-left md:text-center">
+                  {/* Section 1: Why Choose Us */}
                   <div>
-                    Zajišťujeme vám přístup k exkluzivním investičním
-                    příležitostem, které vám pomohou dosáhnout finanční
-                    nezávislosti a dlouhodobého růstu.
+                    <h2 className="font-extrabold text-3xl text-purple-700 mb-6 text-left md:text-center">
+                      Proč si vybrat náš mentoring?
+                    </h2>
+                    <p className="text-lg text-gray-700">
+                      Zajišťujeme vám přístup k exkluzivním investičním
+                      příležitostem, které vám pomohou dosáhnout finanční
+                      nezávislosti a dlouhodobého růstu.
+                    </p>
                   </div>
 
-                  <div className="font-bold text-2xl">
-                    Jak vám pomůžeme uspět?
-                  </div>
+                  {/* Section 2: How We Help You Succeed */}
                   <div>
-                    Pravidelný přísun výhodných investičních příležitostí
-                    (podíly, celkové nemovitosti) po dobu trvání mentoringu,
-                    abyste vždy měli na výběr z nejlepších možností.
-                  </div>
-                  <div>
-                    Profesionální koučink a podpora při vyjednávání lepších
-                    podmínek nákupu nemovitostí kdekoli v ČR, abyste získali
-                    nejlepší možný obchod.
-                  </div>
-                  <div>
-                    Mastermind skupinová setkání 4x za rok v Praze, kde se
-                    setkáte s dalšími úspěšnými investory, získáte cenné
-                    kontakty a zpětnou vazbu.
-                  </div>
-                  <div>
-                    Intenzivní školení o tom, jak získat investory a efektivně
-                    naraisovat kapitál pro vaše projekty.
+                  <h2 className="font-extrabold text-3xl text-purple-700 mb-6 text-left md:text-center">
+                  Jak vám pomůžeme uspět?
+                    </h2>
+                    <div className="text-lg text-gray-700 space-y-5">
+                      <p>
+                        Pravidelný přísun výhodných investičních příležitostí
+                        (podíly, celkové nemovitosti) po dobu trvání mentoringu,
+                        abyste vždy měli na výběr z nejlepších možností.
+                      </p>
+                      <p>
+                        Profesionální koučink a podpora při vyjednávání lepších
+                        podmínek nákupu nemovitostí kdekoli v ČR, abyste získali
+                        nejlepší možný obchod.
+                      </p>
+                      <p>
+                        Mastermind skupinová setkání 4x za rok v Praze, kde se
+                        setkáte s dalšími úspěšnými investory, získáte cenné
+                        kontakty a zpětnou vazbu.
+                      </p>
+                      <p>
+                        Intenzivní školení o tom, jak získat investory a
+                        efektivně naraisovat kapitál pro vaše projekty.
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="font-bold text-2xl">Co od nás získáte?</div>
+                  {/* Section 3: What You Gain */}
                   <div>
-                    Detailní strategii a individuální plán, jak dosáhnout vašich
-                    investičních cílů.
-                  </div>
-                  <div>
-                    Přístup k našemu ověřenému know-how, praktickým nástrojům a
-                    šablonám, které vám pomohou maximalizovat návratnost
-                    investic.
-                  </div>
-                  <div>
-                    Trvalou podporu a mentoring, který vám pomůže překonat výzvy
-                    a dosáhnout úspěchu ve flipování nemovitostí.
+                  <h2 className="font-extrabold text-3xl text-purple-700 mb-6 text-left md:text-center">
+                  Co od nás získáte?
+                    </h2>
+                    <div className="text-lg text-gray-700 space-y-5">
+                      <p>
+                        Detailní strategii a individuální plán, jak dosáhnout
+                        vašich investičních cílů.
+                      </p>
+                      <p>
+                        Přístup k našemu ověřenému know-how, praktickým
+                        nástrojům a šablonám, které vám pomohou maximalizovat
+                        návratnost investic.
+                      </p>
+                      <p>
+                        Trvalou podporu a mentoring, který vám pomůže překonat
+                        výzvy a dosáhnout úspěchu ve flipování nemovitostí.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="flex flex-col items-center">
-              <div className="grid gap-5 p-8 rounded-lg text-pretty md:w-fit">
-                <div className="text-2xl font font-bold">
+              <div className="bg-white shadow-lg rounded-lg p-10 max-w-2xl text-center">
+                {/* Heading */}
+                <h2 className="text-4xl font-bold text-gray-800 mb-6 leading-snug">
                   Jste připraveni investovat do nemovitostí a dosáhnout nových
                   výšin?
-                  <br />
+                </h2>
+
+                <p className="text-lg text-gray-600 mb-10">
                   Přidejte se k nám a využijte příležitosti, která změní váš
                   život!
-                </div>
+                </p>
 
-                <div>
-                  <button className="uppercase text-black bg-green-300 font-bold hover:bg-purple-300 rounded-lg text-xl p-4">
-                    chci mentoring
-                  </button>
-                </div>
+                {/* CTA Button */}
+                <button className="bg-green-500 text-white font-semibold uppercase py-4 px-12 rounded-md text-lg transition-transform transform hover:scale-105 hover:bg-green-600">
+                  Chci mentoring
+                </button>
               </div>
             </div>
 
-            <div className="grid gap-10 lg:justify-center">
-              <div className="text-4xl font font-bold">
+            <div className="grid gap-8 lg:justify-center">
+              <div className="text-5xl font-extrabold text-center text-gray-800">
                 Témata workshopu a mentoringu
               </div>
 
-              <div className="border-purple-300 border-4 rounded-lg grid lg:max-w-screen-2xl text-left p-8 font-semibold text-xl gap-10">
-                {/* První sloupec */}
-                <div className="flex flex-col gap-10 h-full">
-                  <div className="text-3xl font-bold underline underline-offset-4 decoration-purple-400 text-center">
-                    Proč investovat do flipování nemovitostí?
+              <div className="border rounded-xl shadow-lg grid lg:max-w-screen-xl text-left p-4 md:p-8 font-medium text-lg gap-16 bg-white">
+                {/* First Column */}
+                <div className="grid gap-8 lg:grid-cols-3 lg:gap-10">
+                  <div className="bg-purple-100 p-6 rounded-lg shadow-lg">
+                  <div className="text-2xl font-bold text-purple-600 text-left mb-4">
+                  Proč investovat do flipování nemovitostí?
+                    </div>
+                    <div className="text-gray-700">
+                      <p>
+                        Objevte důvody, proč je flipování nemovitostí jednou z
+                        nejziskovějších a nejdynamičtějších forem investování na
+                        trhu.
+                      </p>
+                      <p className="mt-4">
+                        Získejte hlubší porozumění trhu s nemovitostmi a naučte
+                        se, jak efektivně využít své zdroje pro dosažení
+                        finanční nezávislosti.
+                      </p>
+                      <p className="mt-4">
+                        Proč je důležité mít správné nástroje a know-how k tomu,
+                        abyste se stali úspěšným investorem?
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    Objevte důvody, proč je flipování nemovitostí jednou z
-                    nejziskovějších a nejdynamičtějších forem investování na
-                    trhu.
-                  </div>
-                  <div className="flex-1">
-                    Získejte hlubší porozumění trhu s nemovitostmi a naučte se,
-                    jak efektivně využít své zdroje pro dosažení finanční
-                    nezávislosti.
-                  </div>
-                  <div className="flex-1">
-                    Proč je důležité mít správné nástroje a know-how k tomu,
-                    abyste se stali úspěšným investorem?
-                  </div>
-                </div>
 
-                {/* Druhý sloupec */}
-                <div className="flex flex-col gap-10 h-full">
-                  <div className="text-3xl font-bold underline underline-offset-4 decoration-purple-400 text-center">
-                    Jak dosáhnout úspěchu ve flipování nemovitostí?
+                  {/* Second Column */}
+                  <div className="bg-purple-100 p-6 rounded-lg shadow-lg">
+                  <div className="text-2xl font-bold text-purple-600 text-left mb-4">
+                  Jak dosáhnout úspěchu ve flipování nemovitostí?
+                    </div>
+                    <div className="text-gray-700">
+                      <p>
+                        Naučte se, jak analyzovat trh, vyhledávat a nakupovat
+                        nemovitosti za správnou cenu a jak efektivně jednat při
+                        koupi i prodeji.
+                      </p>
+                      <p className="mt-4">
+                        Osvojte si strategie, které zajišťují maximální
+                        návratnost investic, a to i na konkurenčních trzích.
+                      </p>
+                      <p className="mt-4">
+                        Jak dodržovat etické standardy a legislativní požadavky
+                        při flipování nemovitostí, abyste se vyhnuli rizikům a
+                        právním problémům?
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    Naučte se, jak analyzovat trh, vyhledávat a nakupovat
-                    nemovitosti za správnou cenu a jak efektivně jednat při
-                    koupi i prodeji.
-                  </div>
-                  <div className="flex-1">
-                    Osvojte si strategie, které zajišťují maximální návratnost
-                    investic, a to i na konkurenčních trzích.
-                  </div>
-                  <div className="flex-1">
-                    Jak dodržovat etické standardy a legislativní požadavky při
-                    flipování nemovitostí, abyste se vyhnuli rizikům a právním
-                    problémům?
-                  </div>
-                </div>
 
-                {/* Třetí sloupec */}
-                <div className="flex flex-col gap-10 h-full">
-                  <div className="text-3xl font-bold underline underline-offset-4 decoration-purple-400 text-center">
-                    Co vás čeká na workshopu?
-                  </div>
-                  <div className="flex-1">
-                    Detailní školení o flipovacích strategiích od A do Z - od
-                    výběru nemovitosti po finální prodej.
-                  </div>
-                  <div className="flex-1">
-                    Praktické návody na ekonomiku flipování, včetně
-                    rozpočtování, odhadů a správy nákladů.
-                  </div>
-                  <div className="flex-1">
-                    Kompletní přehled o právních požadavcích a předpisech, které
-                    je třeba dodržovat.
-                  </div>
-                  <div className="flex-1">
-                    Etický kodex flipování nemovitostí - zásady a praktiky,
-                    které vás odliší na trhu.
+                  {/* Third Column */}
+                  <div className="bg-purple-100 p-6 rounded-lg shadow-lg">
+                  <div className="text-2xl font-bold text-purple-600 text-left mb-4">
+                      Co vás čeká na workshopu?
+                    </div>
+                    <div className="text-gray-700">
+                      <p>
+                        Detailní školení o flipovacích strategiích od A do Z -
+                        od výběru nemovitosti po finální prodej.
+                      </p>
+                      <p className="mt-4">
+                        Praktické návody na ekonomiku flipování, včetně
+                        rozpočtování, odhadů a správy nákladů.
+                      </p>
+                      <p className="mt-4">
+                        Kompletní přehled o právních požadavcích a předpisech,
+                        které je třeba dodržovat.
+                      </p>
+                      <p className="mt-4">
+                        Etický kodex flipování nemovitostí - zásady a praktiky,
+                        které vás odliší na trhu.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="text-left border-purple-500 border rounded-lg p-8 lg:max-w-screen-md justify-self-center">
+            <div className="text-left border rounded-lg p-8 lg:max-w-screen-md justify-self-center shadow-lg bg-white">
               <div className="grid gap-5">
-                <div className="flex-col gap-2">
+                <div className="flex flex-col gap-2">
                   <div className="font-semibold text-xl">Jiří Krupička</div>
-                  <div className="flex gap-2">
-                    <div>FB</div>
-                    <div>IG</div>
-                    <div>YT</div>
+                  <div className="flex gap-4">
+                    <div className="hover:text-purple-500 cursor-pointer">
+                      FB
+                    </div>
+                    <div className="hover:text-purple-500 cursor-pointer">
+                      IG
+                    </div>
+                    <div className="hover:text-purple-500 cursor-pointer">
+                      YT
+                    </div>
                   </div>
                 </div>
 
-                <div className="text-balance flex flex-col gap-2">
+                <div className="text-balance flex flex-col gap-4">
                   <div>
                     Jiří Krupička je uznávaný expert v oblasti investic do
                     nemovitostí s více než 6 lety zkušeností.
@@ -466,47 +490,33 @@ const Home = () => {
 
             <div>
               <div className="text-4xl font-bold">
-                Máte zájem, ale předtím se ještě chcete na něco zeptat?
+                Máte zájem, ale předtím se ještě <br className='hidden lg:block'/> chcete na něco zeptat?
               </div>
             </div>
 
-            <div className="border grid lg:flex lg:flex-col rounded-lg border-purple-500 md:mx-auto my-4 md:my-8 md:w-96 xl:w-[32rem]">
-              <div className="flex flex-col gap-5 p-5">
-                <input
-                  className="outline-none border-green-300 border p-2 rounded-lg"
-                  type="text"
-                  placeholder="Jméno a příjmení"
-                />
-
-                <input
-                  className="outline-none border-green-300 border p-2 rounded-lg"
-                  type="tel"
-                  name=""
-                  id=""
-                  placeholder="Telefonní číslo"
-                />
-
-                <input
-                  className="outline-none border-green-300 border p-2 rounded-lg"
-                  type="email"
-                  name=""
-                  id=""
-                  placeholder="Email"
-                />
-
-                <textarea
-                  className="outline-none border-green-300 border p-2 rounded-lg"
-                  name=""
-                  id=""
-                  placeholder="Napište nám zprávu."
-                />
-
-                <div>
-                  <button className="uppercase font-bold bg-green-300 hover:bg-purple-300 rounded-lg text-xl py-4 px-8">
-                    odeslat
-                  </button>
-                </div>
-              </div>
+            <div className="grid gap-5 p-8 rounded-lg bg-white shadow-lg w-full lg:w-2/3 mx-auto">
+              <input
+                className="border-2 border-purple-300 rounded-lg py-2 px-4 outline-none focus:border-green-400 transition"
+                type="text"
+                placeholder="Jméno a příjmení"
+              />
+              <input
+                className="border-2 border-purple-300 rounded-lg py-2 px-4 outline-none focus:border-green-400 transition"
+                type="tel"
+                placeholder="Telefonní číslo"
+              />
+              <input
+                className="border-2 border-purple-300 rounded-lg py-2 px-4 outline-none focus:border-green-400 transition"
+                type="email"
+                placeholder="Email"
+              />
+              <textarea
+                className="border-2 border-purple-300 rounded-lg py-2 px-4 outline-none focus:border-green-400 transition"
+                placeholder="Napište nám zprávu"
+              ></textarea>
+              <button className="w-full py-3 bg-green-400 text-white font-bold rounded-lg hover:bg-green-500 transition">
+                Odeslat
+              </button>
             </div>
           </div>
         </div>
