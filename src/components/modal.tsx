@@ -28,10 +28,10 @@ export const ModalFormDialog: FunctionComponent = () => {
               &#0215;
             </button>
             <div className="flex-col text-2xl justify-start text-green-300 gap-1">
-              <span className="line-through line-clamp-4">
-                Agentura pro
+              <span className="list-none line-clamp-none">Agentura pro</span>
+              <span className="list-none line-clamp-none">
+                správu nemovitostí s.r.o.
               </span>
-              <span className="list-none line-clamp-none">správu nemovitostí s.r.o.</span>
             </div>
             <div className="flex flex-col gap-5 py-8">
               <input

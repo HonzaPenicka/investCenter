@@ -25,8 +25,10 @@ const Home = () => {
       {/* Mobile Menu */}
       <nav className="lg:hidden fixed top-0 left-0 w-full bg-white shadow-md z-20 flex justify-between items-center px-6 py-2">
         <div className="flex-col text-2xl justify-start text-green-300 gap-1">
-          <span className="line-through line-clamp-4">Investorské centrum</span>
-          <span className="list-none line-clamp-none">Jiřího Krupičky</span>
+          <span className="list-none line-clamp-none">Agentura pro</span>
+          <span className="list-none line-clamp-none">
+            správu nemovitostí s.r.o.
+          </span>
         </div>
         <div>
           <Burger onClick={toggle} className="cursor-pointer" />
@@ -61,8 +63,10 @@ const Home = () => {
       {/* Desktop Menu */}
       <nav className="hidden lg:flex justify-between items-center bg-white w-full py-2 px-10 shadow-md fixed top-0 left-0 z-20">
         <div className="flex-col text-2xl justify-start text-green-300 gap-1">
-          <span className="line-through line-clamp-4">Agentura pro</span>
-          <span className="list-none line-clamp-none">správu nemovitostí s.r.o.</span>
+          <span className="list-none line-clamp-none">Agentura pro</span>
+          <span className="list-none line-clamp-none">
+            správu nemovitostí s.r.o.
+          </span>
         </div>
 
         <div className="flex gap-8 text-lg font-medium">
@@ -370,11 +374,17 @@ const Home = () => {
                   </div>
 
                   <div>
-                    Společnost <a href="https://www.apsn.cz" className='underline underline-offset-2'>APSN</a>, kterou Jiří založil, se zaměřuje
-                    na strategický nákup a prodej nemovitostí po celé České
-                    republice. Díky svému odbornému přístupu pomáhá klientům
-                    maximalizovat návratnost investic a efektivně rozšiřovat
-                    jejich portfolio.
+                    Společnost{' '}
+                    <a
+                      href="https://www.apsn.cz"
+                      className="underline underline-offset-2"
+                    >
+                      APSN
+                    </a>
+                    , kterou Jiří založil, se zaměřuje na strategický nákup a
+                    prodej nemovitostí po celé České republice. Díky svému
+                    odbornému přístupu pomáhá klientům maximalizovat návratnost
+                    investic a efektivně rozšiřovat jejich portfolio.
                   </div>
 
                   <div>
@@ -468,7 +478,8 @@ const Home = () => {
         </div>
 
         <div className="text-xs text-center">
-          Copyright © 2024 Agentura pro správu nemovitostí s.r.o. — všechna práva vyhrazena.
+          Copyright © 2024 Agentura pro správu nemovitostí s.r.o. — všechna
+          práva vyhrazena.
         </div>
       </div>
     </main>
