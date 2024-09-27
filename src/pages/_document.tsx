@@ -5,7 +5,14 @@ export default function Document() {
   return (
     <Html lang="cs">
       <Head />
-      <body>
+      <body
+        style={{
+          backgroundImage: `url('/llline.svg')`,
+          backgroundSize: 'cover', // nebo 'contain', pokud chcete zachovat poměr stran
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
         <Main />
         <Analytics />
         <NextScript />

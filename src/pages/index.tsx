@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 import { ModalFormDialog } from '@/components/modal';
 import { Burger } from '@/icons/burger';
+import { url } from 'inspector';
 
 const Home = () => {
   const [open, setOpen] = useState(false);
@@ -14,7 +15,6 @@ const Home = () => {
   const toggleModal = useCallback(() => {
     setIsModalOpen((state) => !state);
   }, []);
-
 
   const data = {
     title: 'Investorské centrum Jiřího Krupičky',
@@ -54,7 +54,6 @@ const Home = () => {
               </button>
             </div>
             {isModalOpen && <ModalFormDialog />}
-
           </div>
         )}
       </nav>
@@ -88,7 +87,7 @@ const Home = () => {
             Mentoring nemovitostí
           </button>
         </div>
-        
+
         {isModalOpen && <ModalFormDialog />}
       </nav>
 
@@ -294,8 +293,8 @@ const Home = () => {
 
                   {/* Section 2: How We Help You Succeed */}
                   <div>
-                  <h2 className="font-extrabold text-3xl text-purple-700 mb-6 text-left md:text-center">
-                  Jak vám pomůžeme uspět?
+                    <h2 className="font-extrabold text-3xl text-purple-700 mb-6 text-left md:text-center">
+                      Jak vám pomůžeme uspět?
                     </h2>
                     <div className="text-lg text-gray-700 space-y-5">
                       <p>
@@ -322,8 +321,8 @@ const Home = () => {
 
                   {/* Section 3: What You Gain */}
                   <div>
-                  <h2 className="font-extrabold text-3xl text-purple-700 mb-6 text-left md:text-center">
-                  Co od nás získáte?
+                    <h2 className="font-extrabold text-3xl text-purple-700 mb-6 text-left md:text-center">
+                      Co od nás získáte?
                     </h2>
                     <div className="text-lg text-gray-700 space-y-5">
                       <p>
@@ -374,8 +373,8 @@ const Home = () => {
                 {/* First Column */}
                 <div className="grid gap-8 lg:grid-cols-3 lg:gap-10">
                   <div className="bg-purple-100 p-6 rounded-lg shadow-lg">
-                  <div className="text-2xl font-bold text-purple-600 text-left mb-4">
-                  Proč investovat do flipování nemovitostí?
+                    <div className="text-2xl font-bold text-purple-600 text-left mb-4">
+                      Proč investovat do flipování nemovitostí?
                     </div>
                     <div className="text-gray-700">
                       <p>
@@ -397,8 +396,8 @@ const Home = () => {
 
                   {/* Second Column */}
                   <div className="bg-purple-100 p-6 rounded-lg shadow-lg">
-                  <div className="text-2xl font-bold text-purple-600 text-left mb-4">
-                  Jak dosáhnout úspěchu ve flipování nemovitostí?
+                    <div className="text-2xl font-bold text-purple-600 text-left mb-4">
+                      Jak dosáhnout úspěchu ve flipování nemovitostí?
                     </div>
                     <div className="text-gray-700">
                       <p>
@@ -420,7 +419,7 @@ const Home = () => {
 
                   {/* Third Column */}
                   <div className="bg-purple-100 p-6 rounded-lg shadow-lg">
-                  <div className="text-2xl font-bold text-purple-600 text-left mb-4">
+                    <div className="text-2xl font-bold text-purple-600 text-left mb-4">
                       Co vás čeká na workshopu?
                     </div>
                     <div className="text-gray-700">
@@ -488,7 +487,8 @@ const Home = () => {
 
             <div>
               <div className="text-4xl font-bold">
-                Máte zájem, ale předtím se ještě <br className='hidden lg:block'/> chcete na něco zeptat?
+                Máte zájem, ale předtím se ještě{' '}
+                <br className="hidden lg:block" /> chcete na něco zeptat?
               </div>
             </div>
 

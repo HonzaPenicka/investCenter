@@ -63,8 +63,8 @@ export const ModalFormDialog: FunctionComponent = () => {
               <Dropdown />
 
               <div className="flex justify-center pt-4">
-              <button className="bg-green-500 hover:bg-green-600 text-white uppercase font-bold py-4 px-12 rounded-full text-lg transition-transform transform hover:scale-105 shadow-xl">
-              chci mentoring
+                <button className="bg-green-500 hover:bg-green-600 text-white uppercase font-bold py-4 px-12 rounded-full text-lg transition-transform transform hover:scale-105 shadow-xl">
+                  chci mentoring
                 </button>
               </div>
             </div>
