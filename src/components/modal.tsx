@@ -12,7 +12,15 @@ export const ModalFormDialog: FunctionComponent = () => {
     <>
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-black/50 transition-none">
-          <div className="relative bg-white rounded-lg shadow-lg px-4 py-8 w-full z-60 max-w-lg mx-4 grid">
+          <div
+            className="relative bg-white rounded-lg shadow-lg px-4 py-8 w-full z-60 max-w-lg mx-4 grid"
+            style={{
+              backgroundImage: `url('/llline.svg')`,
+              backgroundSize: 'cover', // nebo 'contain', pokud chcete zachovat poměr stran
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+            }}
+          >
             <button
               className="absolute right-4 top-4 text-3xl"
               onClick={toggle}
@@ -27,13 +35,13 @@ export const ModalFormDialog: FunctionComponent = () => {
             </div>
             <div className="flex flex-col gap-5 py-8">
               <input
-                className="outline-none border-green-300 border p-2 rounded-lg focus:border-purple-300"
+                className="outline-none border-green-300 border-2 p-2 rounded-lg focus:border-purple-300"
                 type="text"
                 placeholder="Jméno a příjmení"
               />
 
               <input
-                className="outline-none border-green-300 border p-2 rounded-lg focus:border-purple-300"
+                className="outline-none border-green-300 border-2 p-2 rounded-lg focus:border-purple-300"
                 type="tel"
                 name=""
                 id=""
@@ -41,7 +49,7 @@ export const ModalFormDialog: FunctionComponent = () => {
               />
 
               <input
-                className="outline-none border-green-300 border p-2 rounded-lg focus:border-purple-300"
+                className="outline-none border-green-300 border-2 p-2 rounded-lg focus:border-purple-300"
                 type="email"
                 name=""
                 id=""
@@ -49,13 +57,13 @@ export const ModalFormDialog: FunctionComponent = () => {
               />
 
               <input
-                className="outline-none border-green-300 border p-2 rounded-lg focus:border-purple-300"
+                className="outline-none border-green-300 border-2 p-2 rounded-lg focus:border-purple-300"
                 type="text"
                 placeholder="Společnost"
               />
 
               <input
-                className="outline-none border-green-300 border p-2 rounded-lg focus:border-purple-300"
+                className="outline-none border-green-300 border-2 p-2 rounded-lg focus:border-purple-300"
                 type="text"
                 placeholder="Kapitál"
               />

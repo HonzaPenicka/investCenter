@@ -19,7 +19,7 @@ export const Dropdown: FunctionComponent = () => {
     <div className="relative inline-block">
       <input
         onClick={toggle}
-        className="px-2 py-2 w-full outline-none border-green-300 border rounded-lg"
+        className="outline-none border-green-300 border-2 p-2 rounded-lg focus:border-purple-300"
         placeholder={selectedOption}
         value={selectedOption}
         readOnly
