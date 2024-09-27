@@ -61,8 +61,8 @@ const Home = () => {
       {/* Desktop Menu */}
       <nav className="hidden lg:flex justify-between items-center bg-white w-full py-2 px-10 shadow-md fixed top-0 left-0 z-20">
         <div className="flex-col text-2xl justify-start text-green-300 gap-1">
-          <span className="line-through line-clamp-4">Investorské centrum</span>
-          <span className="list-none line-clamp-none">Jiřího Krupičky</span>
+          <span className="line-through line-clamp-4">Agentura pro</span>
+          <span className="list-none line-clamp-none">správu nemovitostí s.r.o.</span>
         </div>
 
         <div className="flex gap-8 text-lg font-medium">
@@ -121,105 +121,6 @@ const Home = () => {
               Vytvoříme s vámi progresivní portfolio pro{' '}
               <br className="hidden md:block" /> váš pohodlný život do 3 let
             </div>
-          </div>
-
-          <div className="text-2xl font-bold text-pretty">
-            Výsledky TOP flipařů z mentoringu
-          </div>
-
-          <div className="border rounded-lg border-purple-300 py-4 text-center lg:mx-20">
-            <table className="w-full table-auto border-collapse">
-              <thead>
-                <tr>
-                  <th>Účastník mentoringu</th>
-                  <th>Částka</th>
-                  <th>Časová investice</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr className="bg-purple-300 flex-col justify-between">
-                  <td className="py-2">J.P.</td>
-                  <td className="py-2">600 000 Kč</td>
-                  <td className="py-2">1 měsíc</td>
-                </tr>
-                <tr>
-                  <td className="py-2">M.R.</td>
-                  <td className="py-2">300 000 Kč</td>
-                  <td className="py-2">3 měsíce</td>
-                </tr>
-                <tr className="bg-purple-300">
-                  <td className="py-2">V.S.</td>
-                  <td className="py-2">880 000 Kč</td>
-                  <td className="py-2">2 měsíce</td>
-                </tr>
-                <tr>
-                  <td className="py-2">A.B.</td>
-                  <td className="py-2">450 000 Kč</td>
-                  <td className="py-2">3 měsíce</td>
-                </tr>
-                <tr className="bg-purple-300">
-                  <td className="py-2">R.F.</td>
-                  <td className="py-2">520 000 Kč</td>
-                  <td className="py-2">2 měsíce</td>
-                </tr>
-                <tr>
-                  <td className="py-2">P.N.</td>
-                  <td className="py-2">120 000 Kč</td>
-                  <td className="py-2">1 den</td>
-                </tr>
-                <tr className="bg-purple-300">
-                  <td className="py-2">D.L.</td>
-                  <td className="py-2">270 000 Kč</td>
-                  <td className="py-2">3 měsíce</td>
-                </tr>
-                <tr>
-                  <td className="py-2">O.M.</td>
-                  <td className="py-2">100 000 Kč</td>
-                  <td className="py-2">5 měsíců</td>
-                </tr>
-                <tr className="bg-purple-300">
-                  <td className="py-2">L.T.</td>
-                  <td className="py-2">1 200 000 Kč</td>
-                  <td className="py-2">1 měsíc</td>
-                </tr>
-                <tr>
-                  <td className="py-2">K.V.</td>
-                  <td className="py-2">750 000 Kč</td>
-                  <td className="py-2">3 týdny</td>
-                </tr>
-                <tr className="bg-purple-300">
-                  <td className="py-2">Z.B.</td>
-                  <td className="py-2">870 000 Kč</td>
-                  <td className="py-2">3 měsíce</td>
-                </tr>
-                <tr>
-                  <td className="py-2">E.D.</td>
-                  <td className="py-2">1 050 000 Kč</td>
-                  <td className="py-2">3 měsíce</td>
-                </tr>
-                <tr className="bg-purple-300">
-                  <td className="py-2">T.C.</td>
-                  <td className="py-2">620 000 Kč</td>
-                  <td className="py-2">2 měsíce</td>
-                </tr>
-                <tr>
-                  <td className="py-2">G.J.</td>
-                  <td className="py-2">720 000 Kč</td>
-                  <td className="py-2">3 měsíce</td>
-                </tr>
-                <tr className="bg-purple-300">
-                  <td className="py-2">N.P.</td>
-                  <td className="py-2">1 400 000 Kč</td>
-                  <td className="py-2">4 dny</td>
-                </tr>
-                <tr>
-                  <td className="py-2">R.K.</td>
-                  <td className="py-2">480 000 Kč</td>
-                  <td className="py-2">3 měsíce</td>
-                </tr>
-              </tbody>
-            </table>
           </div>
 
           <div className="grid gap-10">
@@ -469,7 +370,7 @@ const Home = () => {
                   </div>
 
                   <div>
-                    Společnost Krupička Invest, kterou Jiří založil, se zaměřuje
+                    Společnost <a href="https://www.apsn.cz" className='underline underline-offset-2'>APSN</a>, kterou Jiří založil, se zaměřuje
                     na strategický nákup a prodej nemovitostí po celé České
                     republice. Díky svému odbornému přístupu pomáhá klientům
                     maximalizovat návratnost investic a efektivně rozšiřovat
@@ -522,41 +423,41 @@ const Home = () => {
 
       <div className="grid gap-2 text-left pb-5 pt-10">
         <div className="text-xl md:text-2xl font-semibold pb-2">
-          Flipování nemovitostí s.r.o.
+          Agentura pro správu nemovitostí s.r.o.
         </div>
 
         <div className="grid gap-2 md:grid-cols-2 lg:justify-around">
           <div className="grid gap-2">
-            <a href="tel:+420111222333">
+            <a href="tel:+420773007171">
               <b>Telefon</b>:{' '}
               <span className="hover:underline-offset-4 hover:underline">
-                +420 111 222 333
+                +420 773 007 171
               </span>
             </a>
 
             <a
               className="hover:underline-offset-4 hover:underline"
-              href="mailto:investicnicentrum@gmail.com"
+              href="mailto:jiri@jkholding.eu"
             >
               <b>Email</b>:{' '}
               <span className="hover:underline-offset-4 hover:underline">
-                investicnicentrum@gmail.com
+                jiri@jkholding.eu
               </span>
             </a>
           </div>
 
           <div className="grid gap-2 text-pretty md:justify-end">
             <div>
-              <b>Adresa</b>: Rybná 716/24, 110 00 Praha 1
+              <b>Adresa</b>: Bulharská 996/20, 101 00 Praha - Vršovice
             </div>
 
             <div className="flex gap-5 md:gap-10">
               <div>
-                <b>IČ</b>: 19773625
+                <b>IČ</b>: 21177953
               </div>
 
               <div>
-                <b>DIČ</b>: CZ19773625
+                <b>DIČ</b>: CZ21177953
               </div>
             </div>
           </div>
@@ -567,7 +468,7 @@ const Home = () => {
         </div>
 
         <div className="text-xs text-center">
-          Copyright © 2024 IVC — všechna práva vyhrazena.
+          Copyright © 2024 Agentura pro správu nemovitostí s.r.o. — všechna práva vyhrazena.
         </div>
       </div>
     </main>

@@ -16,7 +16,7 @@ export const ModalFormDialog: FunctionComponent = () => {
             className="relative bg-white rounded-lg shadow-lg px-4 py-8 w-full z-60 max-w-lg mx-4 grid"
             style={{
               backgroundImage: `url('/llline.svg')`,
-              backgroundSize: 'cover', // nebo 'contain', pokud chcete zachovat poměr stran
+              backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
             }}
@@ -29,9 +29,9 @@ export const ModalFormDialog: FunctionComponent = () => {
             </button>
             <div className="flex-col text-2xl justify-start text-green-300 gap-1">
               <span className="line-through line-clamp-4">
-                Investorské centrum
+                Agentura pro
               </span>
-              <span className="list-none line-clamp-none">Jiřího Krupičky</span>
+              <span className="list-none line-clamp-none">správu nemovitostí s.r.o.</span>
             </div>
             <div className="flex flex-col gap-5 py-8">
               <input
